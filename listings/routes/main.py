@@ -15,6 +15,7 @@ def index():
         title = request.form["title"]
         body = request.form["body"]
         email = request.form["email"]
+
         new_listing = Listing(title=title, body=body, email=email)
         db.session.add(new_listing)
         db.session.commit()
